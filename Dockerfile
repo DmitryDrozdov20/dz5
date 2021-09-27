@@ -3,7 +3,7 @@ RUN apk update --no-cache \
 && apk add openjdk8 \
 && apk add maven \
 && apk add git \
-&& apk cache clean
+&& rm -rf /var/cache/apk/*
 WORKDIR /home
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
 RUN mvn -f ./boxfuse-sample-java-war-hello/pom.xml package
