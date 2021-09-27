@@ -1,4 +1,4 @@
-FROM ubuntu 20.04
+FROM ubuntu:20.04
 ENV CATALINA_HOME /usr/share/tomcat9
 ENV PATH $CATALINA_HOME/bin:$PATH
 RUN mkdir -p "$CATALINA_HOME"
