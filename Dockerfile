@@ -12,7 +12,7 @@ RUN apt-get update \
 WORKDIR /home/
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
 RUN mvn -f ./boxfuse-sample-java-war-hello/pom.xml package
-RUN cp /boxfuse-sample-java-war-hello/target/hello-1.0.war /var/lib/tomcat9/webapps/
+RUN ./boxfuse-sample-java-war-hello/target/hello-1.0.war /var/lib/tomcat9/webapps/
 EXPOSE 8080
 WORKDIR $CATALINA_HOME
 CMD ["catalina.sh", "run"]
