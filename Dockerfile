@@ -1,8 +1,8 @@
 FROM tomcat:9.0-alpine
 RUN apk update --no-cache \
-&& apk add openjdk8 \
-&& apk add maven \
-&& apk add git
+&& apk add --no-cache openjdk8 \
+&& apk add --no-cache maven \
+&& apk add --no-cache git
 WORKDIR /home
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
 RUN mvn -f ./boxfuse-sample-java-war-hello/pom.xml package
