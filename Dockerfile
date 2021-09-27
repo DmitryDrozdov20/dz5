@@ -1,6 +1,6 @@
 FROM tomcat:9.0-alpine
 RUN apk update --no-cache \
-&& apk add openjdk8 \
+# && apk add openjdk8 \
 && apk add maven \
 && apk add git \
 && rm -rf /var/cache/apk/*
